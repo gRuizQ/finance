@@ -114,6 +114,19 @@ body {
     background-color: #2980b9;
 }
 
+/* New Button (Duplicate) */
+.btn-new {
+    background-color: var(--success);
+    width: auto;
+    padding: 0.5rem 1rem;
+    display: inline-block;
+    margin-right: 5px;
+}
+
+.btn-new:hover {
+    background-color: #219150;
+}
+
 .message {
     margin-top: 1rem;
     text-align: center;
@@ -160,6 +173,48 @@ body {
     color: var(--primary-color);
     border-bottom: 2px solid var(--light-bg);
     padding-bottom: 0.5rem;
+}
+
+/* Chart Tabs */
+.chart-tabs {
+    display: flex;
+    border-bottom: 2px solid var(--light-bg);
+    margin-bottom: 1rem;
+}
+
+.tab-btn {
+    background: none;
+    border: none;
+    padding: 0.8rem 1.2rem;
+    font-size: 1rem;
+    color: var(--text-color);
+    cursor: pointer;
+    border-bottom: 3px solid transparent;
+    transition: all 0.3s;
+    font-weight: 600;
+}
+
+.tab-btn.active {
+    color: var(--secondary-color);
+    border-bottom-color: var(--secondary-color);
+}
+
+.tab-btn:hover:not(.active) {
+    background-color: #f8f9fa;
+}
+
+.tab-content {
+    display: none;
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
 }
 
 .total-balance {

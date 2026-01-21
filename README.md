@@ -33,12 +33,18 @@ O sistema estará acessível em: http://127.0.0.1:5000
 ## Funcionalidades
 
 - **Autenticação**: Cadastro e Login de usuários.
-- **Dashboard**: Visualização do saldo total e gráfico de distribuição.
+- **Dashboard**: 
+    - Visualização do saldo total (soma dos investimentos do dia mais recente).
+    - Gráfico de **Distribuição de Investimentos** (Rosca).
+    - Gráfico de **Valorização de Investimentos** (Barras Empilhadas) com separação por tipo.
 - **Gerenciamento Completo**: 
     - Adicionar novos investimentos com data personalizada.
+    - **Duplicar** registros existentes com o botão "Novo" (agiliza a inserção).
     - **Editar** valores de registros existentes.
     - Remover registros.
-- **Filtros Avançados**: Filtragem de dados por data específica tanto no gráfico quanto na tabela de registros.
+- **Filtros Avançados**: 
+    - Abas para alternar entre visualizações gráficas.
+    - Filtragem de dados por data específica (padrão: data mais recente).
 - **Persistência**: Dados salvos automaticamente em arquivos JSON na pasta `data/`.
 
 ## Documentação da API
