@@ -60,18 +60,32 @@
         <!-- Right Column: Charts and Table -->
         <div class="right-col">
             <div class="card" style="position: relative;">
-                <h3>Distribuição de Investimentos</h3>
+                <!-- Tabs Navigation -->
+                <div class="chart-tabs">
+                    <button class="tab-btn active" data-tab="tab-distribution">Distribuição de Investimentos</button>
+                    <button class="tab-btn" data-tab="tab-evolution">Valorização de Investimentos</button>
+                </div>
                 
-                <!-- Date Filter -->
-                <div class="date-filter-container">
-                    <select id="chart-date-filter">
-                        <option value="all">Todos os Dias</option>
-                        <!-- Dates will be populated via JS -->
-                    </select>
+                <!-- Tab 1: Distribuição (Existing) -->
+                <div id="tab-distribution" class="tab-content active">
+                    <!-- Date Filter -->
+                    <div class="date-filter-container">
+                        <select id="chart-date-filter">
+                            <option value="all">Todos os Dias</option>
+                            <!-- Dates will be populated via JS -->
+                        </select>
+                    </div>
+
+                    <div style="height: 300px; display: flex; justify-content: center;">
+                        <canvas id="investmentsChart"></canvas>
+                    </div>
                 </div>
 
-                <div style="height: 300px; display: flex; justify-content: center;">
-                    <canvas id="investmentsChart"></canvas>
+                <!-- Tab 2: Valorização (New) -->
+                <div id="tab-evolution" class="tab-content">
+                    <div style="height: 300px; display: flex; justify-content: center;">
+                        <canvas id="evolutionChart"></canvas>
+                    </div>
                 </div>
             </div>
 
@@ -81,7 +95,6 @@
                 <!-- Table Date Filter -->
                 <div class="date-filter-container">
                     <select id="table-date-filter">
-                        <option value="all">Todos os Dias</option>
                         <!-- Dates will be populated via JS -->
                     </select>
                 </div>
